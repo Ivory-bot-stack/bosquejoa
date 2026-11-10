@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Perdonar · Mateo 18:21-35</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#041417;--gold:#f0b94a;--ink:#f4efe3;--mut:#9fb8b6;--red:#ff5a4a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif}
+#gl{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0}
+#spacer{height:600vh}
+#flash{position:fixed;inset:0;background:radial-gradient(circle,#7ff5e6 0%,#0e4a4f 60%,#041417 100%);opacity:0;pointer-events:none;z-index:2}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:5;box-shadow:0 0 12px var(--gold)}
+.panel{position:fixed;left:0;right:0;bottom:0;z-index:3;padding:64px clamp(20px,6vw,80px) calc(34px + env(safe-area-inset-bottom,0px));background:linear-gradient(to top,rgba(4,20,23,.92) 25%,rgba(4,20,23,0));opacity:0;visibility:hidden;pointer-events:none}
+.panel .in{max-width:640px}
+.kick{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin:0 0 10px;font-weight:500}
+h1,h2{margin:0 0 12px;font-weight:700;line-height:1.02;letter-spacing:-.025em;font-size:clamp(34px,7.5vw,72px)}
+h2{font-size:clamp(30px,6vw,56px)}
+.gold{color:var(--gold)}
+p{margin:0;color:var(--mut);font-size:clamp(15px,2.2vw,18px);line-height:1.55;max-width:56ch}
+p b{color:var(--ink);font-weight:500}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.tag{border:1px solid rgba(240,185,74,.5);color:var(--gold);padding:6px 12px;border-radius:999px;font-size:13px}
+.tag.s{border-color:rgba(207,214,214,.5);color:#cfd6d6}
+#btn{pointer-events:auto;margin-top:20px;background:var(--gold);color:#1a1204;border:0;border-radius:999px;padding:15px 28px;font:700 16px inherit;font-family:inherit;cursor:pointer;box-shadow:0 0 30px rgba(240,185,74,.45)}
+#btn:active{transform:scale(.97)}
+.after{display:none}
+.free .before{display:none}.free .after{display:block}
+#hint{position:fixed;left:0;right:0;bottom:calc(26px + env(safe-area-inset-bottom,0px));text-align:center;color:var(--mut);font-size:13px;letter-spacing:.2em;text-transform:uppercase;z-index:4;pointer-events:none;animation:b 1.8s ease-in-out infinite}
+@keyframes b{50%{transform:translateY(6px)}}
+#fallback{display:none;position:fixed;inset:0;align-items:center;justify-content:center;text-align:center;padding:30px;z-index:9;background:var(--bg)}
+</style>
+</head>
+<body>
+<div id="spacer"></div>
+<div id="flash"></div><div id="bar"></div>
+<div id="hint">Desliza para entrar ↓</div>
+
+<section class="panel" id="p1"><div class="in">
+<p class="kick">Mateo 18:21-35</p>
+<h1>1% de <span class="gold">batería.</span></h1>
+<p>Cada ofensa que guardas es una notificación sin cerrar. Se acumulan en silencio hasta que <b>pesan más de lo que crees</b>. Entra en la historia.</p>
+</div></section>
+
+<section class="panel" id="p2"><div class="in">
+<p class="kick">La deuda imposible</p>
+<h2>Te perdonaron <span class="gold">muchísimo.</span></h2>
+<p>Un siervo debía al rey <b>10.000 talentos</b>, cerca de 60 millones de denarios, y el rey se la perdonó entera. Pero ese mismo siervo ahogó a un compañero que le debía <b>100 denarios</b>.</p>
+<div class="tags"><span class="tag">10.000 talentos</span><span class="tag s">100 denarios</span></div>
+</div></section>
+
+<section class="panel" id="p3"><div class="in">
+<p class="kick">Dentro de la moneda</p>
+<h2>Lo que no sueltas te <span class="gold">encadena.</span></h2>
+<p>Al fondo de la deuda encuentras tu corazón. El señor entregó al siervo a los verdugos (v. 34): el rencor no encierra al que debe, <b>te encierra a ti</b>.</p>
+</div></section>
+
+<section class="panel" id="p4"><div class="in">
+<div class="before">
+<p class="kick">La liberación</p>
+<h2>Suelta <span class="gold">la deuda.</span></h2>
+<p>Jesús cierra la parábola con una invitación: perdonar de corazón. Rompe las cadenas y deja latir tu corazón libre.</p>
+<button id="btn" type="button">Romper las cadenas</button>
+</div>
+<div class="after">
+<p class="kick">Libre</p>
+<h2><span class="gold">Perdonado.</span> Perdonas.</h2>
+<p>Perdonar no borra lo que pasó; te quita lo que te ataba. <b>Recibiste gracia: ahora dala.</b></p>
+</div>
+</div></section>
+
+<div id="fallback"><p>Tu dispositivo no puede mostrar gráficos 3D (WebGL). Prueba con otro navegador.</p></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)};
+var renderer;
+try{renderer=new THREE.WebGLRenderer({antialias:true});}catch(e){$('#fallback').style.display='flex';return;}
+renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+renderer.domElement.id='gl';document.body.prepend(renderer.domElement);
+
+var scene=new THREE.Scene();scene.background=new THREE.Color(0x041417);scene.fog=new THREE.FogExp2(0x041417,0.03);
+var cam=new THREE.PerspectiveCamera(50,1,0.05,120);scene.add(cam);
+var camLight=new THREE.PointLight(0xffd9a0,1.3,20);cam.add(camLight);
+scene.add(new THREE.AmbientLight(0x88b8b4,0.6));
+var key=new THREE.DirectionalLight(0xffe2a8,1.0);key.position.set(3,5,6);scene.add(key);
+var R=function(a,b){return a+Math.random()*(b-a)};
+var clamp=function(x,a,b){return Math.max(a,Math.min(b,x))};
+var sstep=function(x){x=clamp(x,0,1);return x*x*(3-2*x)};
+
+/* ---------- Partículas ambientales ---------- */
+(function(){
+var n=1000,pos=new Float32Array(n*3),col=new Float32Array(n*3),g=new THREE.Color(0xf0b94a),t=new THREE.Color(0x3fe0cf);
+for(var i=0;i<n;i++){pos[i*3]=R(-14,14);pos[i*3+1]=R(-8,8);pos[i*3+2]=R(8,-48);var c=Math.random()<.55?g:t;col[i*3]=c.r;col[i*3+1]=c.g;col[i*3+2]=c.b;}
+var geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.BufferAttribute(pos,3));geo.setAttribute('color',new THREE.BufferAttribute(col,3));
+var pts=new THREE.Points(geo,new THREE.PointsMaterial({size:.07,vertexColors:true,transparent:true,opacity:.85,depthWrite:false,blending:THREE.AdditiveBlending}));
+pts.frustumCulled=false;scene.add(pts);window.__amb=pts;
+})();
+
+/* ---------- Teléfono ---------- */
+var phone=new THREE.Group();scene.add(phone);
+phone.add(new THREE.Mesh(new THREE.BoxGeometry(1.7,3.4,.18),new THREE.MeshStandardMaterial({color:0x10181a,metalness:.8,roughness:.35})));
+var cv=document.createElement('canvas');cv.width=300;cv.height=600;
+(function(){
+var g=cv.getContext('2d'),gr=g.createLinearGradient(0,0,0,600);gr.addColorStop(0,'#0b2b30');gr.addColorStop(1,'#050b0d');
+g.fillStyle=gr;g.fillRect(0,0,300,600);
+g.textAlign='center';g.fillStyle='#f4efe3';g.font='700 76px system-ui,sans-serif';g.fillText('3:07',150,150);
+g.font='400 17px system-ui,sans-serif';g.fillStyle='#9fb8b6';g.fillText('martes · madrugada',150,184);
+g.strokeStyle='#ff5a4a';g.lineWidth=3;g.strokeRect(232,22,40,18);g.fillStyle='#ff5a4a';g.fillRect(235,25,4,12);g.fillRect(272,27,3,8);
+g.textAlign='right';g.font='600 16px system-ui,sans-serif';g.fillText('1%',224,37);
+var n=['“Ya no cuentes conmigo”','Visto 11:42 p. m.','“Me debes una disculpa”','37 mensajes sin responder'];
+g.textAlign='left';
+for(var i=0;i<4;i++){var y=232+i*82;g.fillStyle='rgba(255,255,255,.08)';g.beginPath();if(g.roundRect)g.roundRect(18,y,264,64,16);else g.rect(18,y,264,64);g.fill();
+g.fillStyle='#f0b94a';g.beginPath();g.arc(40,y+32,6,0,6.3);g.fill();g.fillStyle='#f4efe3';g.font='500 15px system-ui,sans-serif';g.fillText(n[i],58,y+37);}
+})();
+var screen=new THREE.Mesh(new THREE.PlaneGeometry(1.56,3.26),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(cv)}));
+screen.position.z=.091;phone.add(screen);
+var pl=new THREE.PointLight(0x2fd0c0,2.2,9);pl.position.set(0,0,2);phone.add(pl);
+
+/* ---------- Balanza (z = -14) ---------- */
+var S=new THREE.Group();S.position.z=-14;scene.add(S);
+var metal=new THREE.MeshStandardMaterial({color:0x2a3b3d,metalness:.85,roughness:.35});
+var gold=new THREE.MeshStandardMaterial({color:0xf0b94a,metalness:.7,roughness:.3,emissive:0x3a2606});
+var silver=new THREE.MeshStandardMaterial({color:0xcfd6d6,metalness:.8,roughness:.3,emissive:0x1a1f1f});
+var post=new THREE.Mesh(new THREE.CylinderGeometry(.09,.14,3.4,16),metal);post.position.y=-.25;S.add(post);
+var base=new THREE.Mesh(new THREE.CylinderGeometry(1.1,1.3,.15,32),metal);base.position.y=-1.95;S.add(base);
+var beam=new THREE.Mesh(new THREE.BoxGeometry(4.8,.1,.1),gold);beam.position.y=1.4;S.add(beam);
+function mkPan(r){var p=new THREE.Group();
+var d=new THREE.Mesh(new THREE.CylinderGeometry(r,r*.85,.08,32),metal);d.position.y=-1.8;p.add(d);
+var s=new THREE.Mesh(new THREE.CylinderGeometry(.02,.02,1.8,6),metal);s.position.y=-.9;p.add(s);S.add(p);return p;}
+var panL=mkPan(1.35),panR=mkPan(1.0);
+var N=300,inst=new THREE.InstancedMesh(new THREE.CylinderGeometry(.2,.2,.05,18),gold,N),o=new THREE.Object3D();
+for(var i=0;i<N;i++){var h=Math.pow(Math.random(),1.4)*1.7,r=Math.random()*1.05*(1-h/2.1),a=Math.random()*6.28;
+o.position.set(Math.cos(a)*r,-1.74+h,Math.sin(a)*r);o.rotation.set(R(0,3.1),R(0,3.1),R(0,3.1));o.updateMatrix();inst.setMatrixAt(i,o.matrix);}
+panL.add(inst);
+var coin=new THREE.Mesh(new THREE.CylinderGeometry(.13,.13,.03,20),silver);coin.position.set(0,-1.73,0);coin.rotation.z=.3;panR.add(coin);
+var BL=2.4,beamAngle=0;
+var hero=new THREE.Group();hero.position.set(0,-.45,.9);panL.add(hero);
+var hd=new THREE.Mesh(new THREE.CylinderGeometry(.72,.72,.1,48),new THREE.MeshStandardMaterial({color:0xf5c75a,metalness:.7,roughness:.28,emissive:0x6a4a10}));hd.rotation.x=Math.PI/2;hero.add(hd);
+var hr=new THREE.Mesh(new THREE.TorusGeometry(.72,.045,12,48),new THREE.MeshBasicMaterial({color:0xffe9a8}));hero.add(hr);
+var hi=new THREE.Mesh(new THREE.TorusGeometry(.44,.025,10,40),new THREE.MeshBasicMaterial({color:0xffe9a8}));hi.position.z=.06;hero.add(hi);
+var hc=new THREE.Mesh(new THREE.CircleGeometry(.4,40),new THREE.MeshBasicMaterial({color:0x3fe0cf,transparent:true,opacity:.55,blending:THREE.AdditiveBlending,depthWrite:false}));hc.position.z=.07;hero.add(hc);
+var heroW=new THREE.Vector3();
+
+/* ---------- Cadenas (z = -26) ---------- */
+var C=new THREE.Group();C.position.z=-30;C.visible=false;scene.add(C);
+var chainMat=new THREE.MeshStandardMaterial({color:0x8a9a9a,metalness:.9,roughness:.4});
+var linkGeo=new THREE.TorusGeometry(.26,.07,10,18);linkGeo.scale(.75,1,1);
+var links=[];
+function mkChain(x1,y1,x2,y2,n){var ang=Math.atan2(y2-y1,x2-x1)-Math.PI/2;
+for(var i=0;i<n;i++){var t=(i+.5)/n,g=new THREE.Group(),m=new THREE.Mesh(linkGeo,chainMat);m.rotation.y=(i%2)*Math.PI/2;g.add(m);
+g.position.set(x1+(x2-x1)*t,y1+(y2-y1)*t,.75);g.rotation.z=ang;C.add(g);
+links.push({g:g,p0:g.position.clone(),r0:ang,v:new THREE.Vector3(),s:new THREE.Vector3()});}}
+mkChain(-3.1,2.3,3.1,-2.3,13);mkChain(3.1,2.3,-3.1,-2.3,13);
+var hs=new THREE.Shape();hs.moveTo(0,-1);hs.bezierCurveTo(-.2,-.75,-1,-.35,-1,.3);hs.bezierCurveTo(-1,.9,-.35,1.1,0,.6);hs.bezierCurveTo(.35,1.1,1,.9,1,.3);hs.bezierCurveTo(1,-.35,.2,-.75,0,-1);
+var hg=new THREE.ExtrudeGeometry(hs,{depth:.5,bevelEnabled:true,bevelThickness:.15,bevelSize:.12,bevelSegments:5,curveSegments:28});hg.center();
+var orbMat=new THREE.MeshStandardMaterial({color:0x3a0a10,metalness:.3,roughness:.45,emissive:0x7a1220,emissiveIntensity:1});
+var orb=new THREE.Mesh(hg,orbMat);orb.scale.setScalar(1.5);C.add(orb);
+var orbLight=new THREE.PointLight(0xff3b2e,1.6,12);orbLight.position.z=1.5;C.add(orbLight);
+/* explosión de luz */
+var BN=420,bPos=new Float32Array(BN*3),bVel=new Float32Array(BN*3),bGeo=new THREE.BufferGeometry();
+bGeo.setAttribute('position',new THREE.BufferAttribute(bPos,3));
+var bMat=new THREE.PointsMaterial({color:0xffd27a,size:.13,transparent:true,opacity:0,depthWrite:false,blending:THREE.AdditiveBlending});
+var burstPts=new THREE.Points(bGeo,bMat);burstPts.frustumCulled=false;C.add(burstPts);
+var ring=new THREE.Mesh(new THREE.RingGeometry(1,1.08,64),new THREE.MeshBasicMaterial({color:0xffd27a,transparent:true,opacity:0,side:THREE.DoubleSide,depthWrite:false}));C.add(ring);
+
+var broken=false,brokeT=0,clock=new THREE.Clock(),T=0;
+function breakChains(){
+if(broken)return;broken=true;brokeT=T;
+chainMat.transparent=true;
+links.forEach(function(l){l.v.set(R(-3,3),R(.5,3),R(-1,3));l.s.set(R(-4,4),R(-4,4),R(-4,4));});
+for(var i=0;i<BN;i++){var a=Math.random()*6.28,b=Math.acos(R(-1,1)),sp=R(2,7);
+bPos[i*3]=bPos[i*3+1]=bPos[i*3+2]=0;
+bVel[i*3]=Math.sin(b)*Math.cos(a)*sp;bVel[i*3+1]=Math.sin(b)*Math.sin(a)*sp;bVel[i*3+2]=Math.cos(b)*sp;}
+bMat.opacity=1;
+orbMat.color.set(0xff5d6c);orbMat.emissive.set(0xd02a3a);orbLight.color.set(0xffd27a);orbLight.intensity=3.2;
+document.body.classList.add('free');
+}
+function resetChains(){
+broken=false;chainMat.transparent=false;chainMat.opacity=1;
+links.forEach(function(l){l.g.position.copy(l.p0);l.g.rotation.set(0,0,l.r0);l.v.set(0,0,0);});
+orbMat.color.set(0x3a0a10);orbMat.emissive.set(0x7a1220);orbLight.color.set(0xff3b2e);orbLight.intensity=1.6;orb.scale.setScalar(1.5);
+bMat.opacity=0;ring.material.opacity=0;document.body.classList.remove('free');
+}
+
+/* ---------- Scroll, cámara y paneles ---------- */
+var keys=[[0,7],[.2,.35],[.28,-1],[.5,-7],[.56,-10],[.78,-19],[1,-20.2]];
+function camZ(p){for(var i=1;i<keys.length;i++){if(p<=keys[i][0]){var a=keys[i-1],b=keys[i],t=(p-a[0])/(b[0]-a[0]);return a[1]+(b[1]-a[1])*t;}}return keys[keys.length-1][1];}
+var panels=[{el:$('#p1'),c:.09,w:.1},{el:$('#p2'),c:.4,w:.1},{el:$('#p3'),c:.78,w:.05},{el:$('#p4'),c:.95,w:.07}];
+var flash=$('#flash'),bar=$('#bar'),hint=$('#hint');
+var sp=0,tp=0,px=0,py=0,tx=0,ty=0;
+function readScroll(){var m=document.documentElement.scrollHeight-innerHeight;tp=m>0?clamp(scrollY/m,0,1):0;}
+addEventListener('scroll',readScroll,{passive:true});readScroll();
+addEventListener('pointermove',function(e){tx=e.clientX/innerWidth*2-1;ty=e.clientY/innerHeight*2-1;});
+addEventListener('click',function(){if(sp>.85)breakChains();});
+$('#btn').addEventListener('click',breakChains);
+function resize(){var w=innerWidth,h=innerHeight;renderer.setSize(w,h);cam.aspect=w/h;cam.fov=w/h<1?70:50;cam.updateProjectionMatrix();}
+addEventListener('resize',resize);resize();
+
+function frame(){
+requestAnimationFrame(frame);
+var dt=Math.min(clock.getDelta(),.05);T+=dt;
+sp+=(tp-sp)*.08;px+=(tx-px)*.05;py+=(ty-py)*.05;
+var z=camZ(sp);
+hero.getWorldPosition(heroW);
+var bx=px*.4,by=-py*.25,cx=bx,cy=by,cz=z,lx=px*.5,ly=-py*.3,lz=z-6;
+if(sp>.5&&sp<=.64){var d=sstep((sp-.5)/.14);cx=bx+(heroW.x-bx)*d;cy=by+(heroW.y-by)*d;cz=-7+(heroW.z+.4+7)*d;lx+=(heroW.x-lx)*d;ly+=(heroW.y-ly)*d;lz+=(heroW.z-lz)*d;}
+else if(sp>.64){var e=clamp((sp-.64)/.1,0,1),se=sstep(e),z0=heroW.z+.4;cx=heroW.x+(bx-heroW.x)*se;cy=heroW.y+(by-heroW.y)*se;cz=z0+(-22-z0)*e-2.2*clamp((sp-.74)/.26,0,1);lx=cx;ly=cy;lz=cz-6;}
+cam.position.set(cx,cy,cz);cam.lookAt(lx,ly,lz);
+
+/* teléfono */
+var f=1-clamp(sp/.17,0,1);
+phone.rotation.y=(Math.sin(T*.6)*.4+px*.3)*f;phone.rotation.x=-py*.15*f;phone.position.y=Math.sin(T*1.1)*.08;
+/* balanza */
+var tgt=.4*sstep((sp-.3)/.14);
+beamAngle=tgt+Math.sin(T*1.4)*.012;beam.rotation.z=beamAngle;
+panL.position.set(-BL*Math.cos(beamAngle),1.4-BL*Math.sin(beamAngle),0);
+panR.position.set(BL*Math.cos(beamAngle),1.4+BL*Math.sin(beamAngle),0);
+coin.rotation.y=T;
+S.rotation.y=Math.sin(T*.35)*.45*(1-sstep((sp-.4)/.1));
+/* cadenas */
+if(!broken){
+if(sp<.66&&document.body.classList.contains('free'))resetChains();
+orbMat.emissiveIntensity=.8+Math.sin(T*3)*.35;orb.scale.setScalar(1.5*(1+Math.max(0,Math.sin(T*3))*.04));
+links.forEach(function(l,i){l.g.rotation.z=l.r0+Math.sin(T*2.2+i)*.02;});
+C.rotation.z=Math.sin(T*.8)*.02;
+}else{
+var e=T-brokeT;
+if(sp<.66)resetChains();
+links.forEach(function(l){l.v.y-=3*dt;l.g.position.addScaledVector(l.v,dt);l.g.rotation.x+=l.s.x*dt;l.g.rotation.y+=l.s.y*dt;l.g.rotation.z+=l.s.z*dt;});
+chainMat.opacity=Math.max(0,1-e/3.5);
+for(var i=0;i<BN*3;i++){bPos[i]+=bVel[i]*dt;bVel[i]*=.985;}
+bGeo.attributes.position.needsUpdate=true;bMat.opacity=Math.max(0,1-e/3.5);
+ring.scale.setScalar(1+e*9);ring.material.opacity=Math.max(0,.9-e/1.6);
+orb.scale.setScalar(1.5*(1+Math.sin(T*2)*.05));orbMat.emissiveIntensity=1+Math.sin(T*2)*.3;
+}
+window.__amb.position.y=Math.sin(T*.2)*.3;C.visible=sp>.62;hi.rotation.z=T*.8;
+
+/* UI */
+panels.forEach(function(p){var o=clamp(1-(Math.abs(sp-p.c)-p.w)/.04,0,1);
+p.el.style.opacity=o;p.el.style.visibility=o<.02?'hidden':'visible';});
+flash.style.opacity=Math.max(Math.max(0,1-Math.abs(sp-.21)/.035),Math.max(0,1-Math.abs(sp-.645)/.03))*.85;
+bar.style.width=(sp*100)+'%';hint.style.opacity=clamp(1-sp*30,0,1);
+renderer.render(scene,cam);
+}
+frame();
+})();
+</script>
+</body>
+</html>
